@@ -1,0 +1,8 @@
+Country,studysize,cases,method,rate10-4,CIL,CIU
+Czech Republic,154374,185,Clinical,11.9a,10.38,13.84
+Greece,448435,113,mNY,2.9,2.6,3.3
+Iceland,220441,280,mNY,10.4,9.1,11.7
+Norway,2170,570,mNY,26.3a,24.2,28.5
+Sweden,849253,746,Clinical,8.8a,8.2,9.4
+Japan,101100000,6760,Rome or NY,0.7a,0.65,0.68
+USA,52000,68,Various,13.1a,10.3,16.6
