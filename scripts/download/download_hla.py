@@ -8,6 +8,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import requests
 
+locus = "B"
+
 # Download countries in regions as defined on 
 # http://www.allelefrequencies.net/datasets.asp#tag_4
 r = requests.get("https://raw.githubusercontent.com/BarinthusBio/HLAfreq/main/data/example/countries.csv")
@@ -18,6 +20,8 @@ regions = pd.read_csv("data/raw/countries.csv")
 
 countries = regions.Country.tolist()
 
+os.system(f"mkdir -p data/external/{locus}")
+
 ############
 # Download data
 ############
@@ -27,10 +31,10 @@ countries = regions.Country.tolist()
 for country in countries:
     print()
     print(country)
-    if not os.path.exists("data/external/DQB1/%s_raw.csv" %country):
-        base_url = HLAfreq.makeURL(country, standard="g", locus="DQB1")
+    if not os.path.exists(f"data/external/{locus}/{country}_raw.csv"):
+        base_url = HLAfreq.makeURL(country, standard="g", locus=f"{locus}")
         try:
             aftab = HLAfreq.getAFdata(base_url)
-            aftab.to_csv("data/external/DQB1/%s_raw.csv" %country, index=False)
+            aftab.to_csv(f"data/external/{locus}/{country}_raw.csv", index=False)
         except:
             pass
