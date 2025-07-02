@@ -7,7 +7,7 @@ from matplotlib import pyplot as plt
 
 locus = "B"
 
-country = "Italy"
+country = "Singapore"
 
 aftab = pd.read_csv(f"data/external/{locus}/%s_raw.csv" %country)
 aftab = HLAfreq.only_complete(aftab)
@@ -21,5 +21,5 @@ caf = pd.merge(caf, hdi, how="left", on="allele")
 caf['country'] = country
 aftab['country'] = country
 
-HLAfreq.plotAF(caf, aftab, hdi=hdi, compound_mean=hdi)
-HLAfreq.plotAF(caf, aftab)
+HLAfreq.plotAF(caf, aftab.sort_values("allele_freq"), hdi=hdi, compound_mean=hdi)
+HLAfreq.plotAF(caf, aftab.sort_values("allele_freq"))
