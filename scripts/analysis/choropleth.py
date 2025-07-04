@@ -45,21 +45,21 @@ aaw[aaw['type']=="known"].plot(
     norm(np.log(aaw[aaw['type']=="known"]["Rate10.4"])),
     cmap=cmap,
     edgecolor="black",
-    linewidth=2,
+    # linewidth=2,
     ax=ax
 )
 aaw[aaw['type']=="predin"].plot(
     norm(aaw[aaw['type']=="predin"]["predrate"]),
     cmap=cmap,
     edgecolor="darkcyan",
-    linewidth=2,
+    # linewidth=2,
     ax=ax
 )
 aaw[aaw['type']=="predout"].plot(
     norm(aaw[aaw['type']=="predout"]["predrate"]),
     cmap=cmap,
     edgecolor="orange",
-    linewidth=2,
+    # linewidth=2,
     ax=ax
 )
 sm = cm.ScalarMappable(norm=norm, cmap=cm.cividis)
