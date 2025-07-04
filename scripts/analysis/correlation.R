@@ -73,7 +73,8 @@ ggplot(knownrates, aes(allele_freq, log(Rate10.4))) +
   xlim(0,0.082)+
   ylim(0,6)+
   theme_bw()
-  ggsave("cor.png")
+
+ggsave("cor.png")
 
 knownrates$type <- "known"
 knownrates$predrate <- NA
