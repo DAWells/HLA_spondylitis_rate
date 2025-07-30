@@ -14,7 +14,7 @@ Combine multistudy data for each single country using `HLAfreq`.
 Pair HLA frequency estimates with disease rates.
 
 # Analysis
-## Correlation
+## Correlation.R
 Model correlation between HLA frequency and disease rate.
 
 ## Choropleth
