@@ -1,18 +1,24 @@
 # Undiagnosed ankylosing spondyloarthritis
 
-The HLA-B27 is present in ~90% of ankylosing spondyloarthritis patients.
-We can correlate national HLA allele frequencies with reported ankylosing
-spondyloarthritis rates. Outliers in this relationship may indicate
-undiagnosed cases. In addition, we can use HLA frequencies to estimate
-rates of celiac disease in countries where data is missing. Finally
-maybe we can do something cool filling in HLA frequency data using priors.
+The HLA immune genes are so important for triggering the immune system, that we can use these genes to predict a person’s immune response. Here I will demonstrate how to estimate disease rates just from immune gene frequencies. All the steps from getting the immune gene data, to identifying high risk countries, and assessing limitations of the model are discussed [here](https://towardsdatascience.com/estimating-disease-rates-without-diagnosis/).
 
-- [x] Get estimates of ankylosing spondyloarthritis rates
-- [x] Get estimates of HLA-B27 frequency
-- [x] Plot both as choropleths
-- [x] Plot correlation
-- [x] Identify outliers in disease rates
-- [x] Fill in missing disease rates from HLA data
+# Download
+## Download HLA
+Download HLA frequency data for all available countries.
+
+# Preprocess
+## Combine HLA
+Combine multistudy data for each single country using `HLAfreq`.
+
+## Merge HLA disease
+Pair HLA frequency estimates with disease rates.
+
+# Analysis
+## Correlation
+Model correlation between HLA frequency and disease rate.
+
+## Choropleth
+Plot disease rates as a coloured map.
 
 # Papers
 - Dean, L. E., Jones, G. T., MacDonald, A. G., Downham, C., Sturrock, R. D., & Macfarlane, G. J. (2014). Global prevalence of ankylosing spondylitis. Rheumatology, 53(4), 650-657.
